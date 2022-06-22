@@ -6,19 +6,31 @@ import (
 )
 
 func main() {
+	fmt.Print("Yapmak istediğiniz işlemi yapınız: (Toplama,Cikartma,Bolme,KaresiniAl,Carpma): ")
+	var islem string
+	fmt.Scanln(&islem)
 
-	fmt.Println("--TOPLAMA--")
-	topla()
-	fmt.Println("--CIKART--")
-	cikart()
-	fmt.Println("--CARP--")
-	carp()
-	fmt.Println("--BOL--")
-	bol()
-	fmt.Println("--KARESINIAL--")
-	karesinial()
+	switch islem {
+	case "Toplama":
+		topla()
 
+	case "Cikartma":
+		cikart()
+
+	case "Bolme":
+		bol()
+
+	case "Carpma":
+		carp()
+
+	case "KaresiniAl":
+		karesinial()
+
+	default:
+		fmt.Println("Lütfen yapmak istediğiniz işlemi düzgün yazınız")
+	}
 }
+
 func topla() {
 	var sayi1 float64
 	var sayi2 float64
